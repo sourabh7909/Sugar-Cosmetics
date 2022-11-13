@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #login{
+<style>
+     #login{
             height:330px;
             width:50%;
             margin:auto;
@@ -107,21 +107,39 @@
     </style>
 </head>
 <body>
-<div id="login">
-    <p>Login/Sign Up Using Phone</p>
-    <input type="text" placeholder="+91">
-    <p>Registering for this site allows you to access your order status and history. Just fill in the above fields, and we'll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
-    <button>SEND ME OTP</button>
-</div>
-<div id="terms">
-    <input type="checkbox">
-    <p>Get important updates on Whatsapp <span>Terms and Conditions</span></p>
-</div>
-<div id="help">
-    <p>Need Help?<span>Contact Us</span></p>
-</div>
-<div id="terms1">
-    <p>By Signing up or logging in, you agree to our  <span>Terms and Conditions</span></p>
-</div>
+    <div id="login">
+        <p>Login/Sign Up Using Phone</p>
+        <input oninput="handleregister()" type="text" placeholder="+91">
+        <p>Registering for this site allows you to access your order status and history. Just fill in the above fields, and we'll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
+        <button>SEND ME OTP</button>
+    </div>
+    <div id="terms">
+        <input type="checkbox">
+        <p>Get important updates on Whatsapp <span>Terms and Conditions</span></p>
+    </div>
+    <div id="help">
+        <p>Need Help?<span>Contact Us</span></p>
+    </div>
+    <div id="terms1">
+        <p>By Signing up or logging in, you agree to our  <span>Terms and Conditions</span></p>
+    </div>
 </body>
 </html>
+
+<script>
+    function handleregister(){
+
+
+let log=document.querySelector("#login input").value;
+
+let button=document.querySelector("#login button").addEventListener("click",function(){
+    if(log==="7909378587"){
+        alert("Register Succesfull")
+    }
+    if(log===""){
+         document.querySelector("#login input").value="please fill your number"
+    }
+})
+}
+handleregister()
+</script>

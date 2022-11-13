@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+           padding: 0;
+        }
+        #navbar{
+            width:100%;
+            height:180px;
+            border:2px solid black;
+            background-color:black;
+            position: fixed;
+            z-index: 1;
+        }
+        #navbar>div:nth-child(1){
+            height:15%;
+            /* border:1px solid gray; */
+            background-color: black;
+            color:white;
+            font-size: 16px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 0.7%;
+        }
+       #navbar>div:nth-child(2){
+            height:50%;
+        
+            display: flex;
+            align-items: center;
+           
+        }
+        #navbar>div:nth-child(2) img{
+          height:90%;
+          width:17%;
+          padding-left: 40px;
+         
+        }
+        #navbar>div:nth-child(2)>input{
+          height: 50%;
+          width:40%;
+          background-color: rgb(41, 39, 39);
+          border-bottom-left-radius: 10px;
+          border-top-left-radius: 10px;
+          color: white;
+          padding-left: 40px;
+        }
+        #navbar>div:nth-child(2)>button{
+       margin-left: -65px;
+       height:62%;
+       width:10%;
+       font-size: 20px;
+       background-color: white;
+       border-bottom-right-radius: 10px;
+       border-top-right-radius: 10px;
+         }
+        #navbar>div:nth-child(2) p{
+            color:white;
+            display:inline; 
+            width:10%; 
+            font-family: Arial, Helvetica, sans-serif;
+            /* border:2px solid red; */
+          
+        }
+       
+        #navbar>div:nth-child(2) button+img{
+            height:35%;
+          width:1.5%;
+          margin-left:6%;
+         
+        }
+        #img{
+      height:35%;
+      margin-left: 0px;
+      /* border:2px solid red; */
+      display: flex;
+    
+        }
+       #navbar>div:nth-child(3){
+        display: flex;
+        background-color: rgb(19, 18, 18);
+       }
+       #navbar>div:nth-child(3) p{
+        color:white;
+        width:3%;
+        margin-left: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+       }
+       #slider{
+   overflow: hidden;
+   }
+   #slider figure{
+    position: relative;
+    width:500%;
+    margin:0;
+    left:0;
+    animation: 15s  slider infinite;
+    margin-top: 185px;
+   }
+   #slider figure img{
+  width:20%;
+   float:left;
+   }
+   @keyframes slider{
+    0%{
+        left:0;
+    }
+    20%{
+        left:0;
+    }
+    25%{
+        left:-100%;
+    }
+    45%{
+        left:-100%;
+    }
+    50%{
+        left:-200%;
+    }
+    70%{
+        left:-200%;
+    }
+    75%{
+        left:-300%;
+    }
+    95%{
+        left:-300%;
+    }
+    100%{
+        left:-400%;
+    }
+   }
+
+   #cards{
+   margin-top: 70px;
+    height:630px;
+    width:100%;
+    background-color: rgba(7, 19, 95, 0.974);
+   }
+   #cards>p{
+    padding-top: 40px;
+    text-align: center;
+    color:white;
+    font-size:22px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    
+   }
+   #innercards{
+   width:85%;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   margin: auto;
+  
+   gap: 20px;
+   
+  
+   }
+   #innercards>div{
+    /* border:2px solid black; */
+    height: 450px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+
+   }
+   #innercards>div>img{
+    height:55%;
+    width:55%;
+   }
+   #innercards>div>p{
+    margin:8px;
+   
+   }
+   #innercards>div>div>img{
+    height:40px;
+   }
+   #innercards>div>div{
+    display: flex;
+    justify-content: space-around;
+   }
+   #innercards>div>div>button{
+    width:70%;
+    border-radius: 5px;
+    height:40px;
+    background-color: black;
+    color: white;
+   }
+   #cards>p>span{
+    color:red;
+    margin:0px 10px;
+   
+   }
+   #hot-deals{
+    /* margin-top: 70px; */
+    height:460px;
+    width:100%;
+    /* border:2px solid red; */
+   }
+   #hot-deals>p{
+    padding-top: 40px;
+    text-align: center;
+    color:black;
+    font-size:20px;
+    font-weight: 550;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   #hot-deals-in{
+    width:95%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: auto;
+    height:310px;
+    gap:30px;
+   
+   }
+   #hot-deals-in>div{
+    /* border: 1px solid red; */
+    /* background-color: aqua; */
+    border-radius: 10px;
+   }
+   #hot-deals-in>div>img{
+    width:100%;
+    height:100%;
+    border-radius: 10px;
+   }
+   #hot-deals>p>span{
+    color:red;
+    margin:0px 10px;
+   
+   }
+   #just-in{
+    height:520px;
+    width:100%;
+    /* border:2px solid red; */
+   }
+   #just-in>p{
+  text-align: center;
+  color: black;
+  font-size:22px;
+  font-family: Arial, Helvetica, sans-serif;
+   }
+   #just-in>p>span{
+    color:red;
+    margin:0px 5px;
+   }
+   #just-in-in{
+    width:80%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    height:400px;
+    text-align: center;
+    margin: auto;
+    gap:20px;
+  
+   
+   }
+   #just-in-in>div{
+    height:420px;
+  
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   }
+   #just-in-in>div>img{
+    width:60%;
+    height:55%;
+    border-radius: 10px;
+   }
+   #just-in-in>div>div{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+
+   }
+
+   #just-in-in>div>p{
+    margin: 0px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+   font-size: 13px;
+   }
+   #just-in-in>div>h2{
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 20px;
+   }
+   #just-in-in>div>div>img{
+   width:15%;
+  
+   }
+   #just-in-in>div>div>button{
+   width:70%;
+   border-radius: 10px;
+   background-color: black;
+   color:white;
+   font-weight: 600;
+   }
+   #sugar{
+    height:500px;
+    width:100%;
+    /* border:2px solid red; */
+
+   }
+   #sugar>p{
+    text-align: center;
+    font-size: 21px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+   }
+   #sugar>p>span{
+    margin:0px 10px;
+    color:red;
+   }
+   #sugar-in{
+    width:80%;
+    height:370px;
+    /* border: 1px solid red; */
+    margin:auto;
+   display: grid;
+   gap:10px;
+   grid-template-columns: repeat(5,1fr);
+   
+   } 
+   #sugar-in>div>div>video{
+    height:100%;
+    width:100%;
+    border-radius: 10px;
+   }
+   #sukar-he{
+    width:100%;
+  
+    height:500px;
+    /* border:2px solid red; */
+   }
+   #sukar-he>div{
+   width:80%;
+   /* border:2px solid red; */
+   height:420px;
+   margin: auto;
+   }
+   #sukar-he>div>iframe{
+   width:100%;
+   height:100%;
+   border-radius: 15px;
+   }
+   #sukar-he>p{
+    text-align: center;
+    font-size:20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+   }
+   #sukar-he>p>span{
+    color:red;
+    margin:10px;
+   }
+   #top{
+   height:400px;
+   width:100%;
+   /* border:2px solid red; */
+   }
+   #top>p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+   }
+   #top>p>span{
+    margin:0px 10px;
+    color: red;
+   }
+   #top-in{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   width:95%;
+  margin:auto;
+  gap:35px;
+   }
+   #top-in>div{
+    height:300px;
+    /* border:2px solid red; */
+    margin: auto;
+   width:100%;
+   border-radius: 10px;
+   }
+   #top-in>div>img{
+    width:100%;
+    height:100%;
+    border-radius: 10px;
+   }
+   #gifting{
+   width:100%;
+   height:520px;
+   /* border:2px solid red; */
+   }
+   #gifting>p{
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+   }
+
+   #gifting>p>span{
+    color:red;
+    margin:0px 10px;
+   }
+   #gifting-in{
+    width:80%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin:auto;
+    gap:20px;
+   }
+   #gifting-in>div{
+    height:420px;
+   width:100%;
+   /* border:2px solid red; */
+   margin:auto;
+   border-radius: 10px;
+   text-align: center;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   }
+   #gifting-in>div>img{
+   width:57%;
+   height:55%;
+   border-radius: 10px;
+   }
+   #gifting-in>div>div{
+    padding-top: 30px;
+    display:flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+  
+   }
+   #gifting-in>div>p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    padding:0px 50px;
+   }
+   #gifting-in>div>div>img{
+    width:45px;
+   }
+   #gifting-in>div>div>button{
+    width:75%;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    height:45px;
+   }
+   #gifting-in>div>h3>span+span{
+    color:deeppink;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0px 15px;  
+   }
+   #gifting-in>div>h3{
+   padding-top: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  
+   }
+
+   #gifting-in>div:nth-child(2) h3{
+  margin-top: -10px;
+    font-family:Arial, Helvetica, sans-serif;
+    /* border:2px solid red */
+   }
+   #gifting-in>div>h3>span{
+    color:gray;
+    font-size: 12px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0px 15px ;
+   }
+   #reffer{
+    height:430px;
+    /* border:2px solid red; */
+   }
+   #reffer>p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+   }
+   #reffer>p>span{
+    color:red;
+    margin:0px 15px;
+   }
+   #reffer-in{
+    width:95%;
+   height:340px;
+   margin:auto;
+   }
+   #reffer-in>div{
+    width:100%;;
+    height:100%;
+   }
+   #reffer-in>div>img{
+    width:100%;
+    height:100%;
+    border-radius: 10px;
+   }
+   #super{
+    width:100%;
+    height:610px;
+    /* border:2px solid red; */
+    background-color: rgb(41, 39, 39);
+   }
+   #super>p{
+    padding: 45px 0px 15px 0px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color:white;
+   }
+   #super>p>span{
+    color:red;
+    margin:0px 10px;
+   }
+   #super-in{
+    width:80%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin:auto;
+    gap:20px;
+   
+   }
+   #super-in>div{
+    height:420px;
+   width:100%;
+   /* border:2px solid red; */
+   margin:auto;
+   border-radius: 10px;
+   text-align: center;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   background-color: white;
+   }
+   #super-in>div>img{
+   width:57%;
+   height:55%;
+   border-radius: 10px;
+   }
+   #super-in>div>div{
+    padding-top: 30px;
+    display:flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+  
+   }
+   #super-in>div>p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    padding:0px 50px;
+   }
+   #super-in>div>div>img{
+    width:45px;
+   }
+   #super-in>div>div>button{
+    width:75%;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    height:45px;
+   }
+   #super-in>div>h3>span+span{
+    color:deeppink;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0px 15px;  
+   }
+   #super-in>div>h3{
+   padding-top: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  
+   }
+
+   #super-in>div:nth-child(2) h3{
+  margin-top: -10px;
+    font-family:Arial, Helvetica, sans-serif;
+    /* border:2px solid red */
+   }
+   #super-in>div>h3>span{
+    color:gray;
+    font-size: 12px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0px 15px ;
+   }
+   #newly{
+    height:450px;
+    /* border:2px solid red; */
+   }
+   #newly>p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   #newly>p>span{
+    color:red;
+    margin:0px 15px;
+   }
+   #newly-in{
+    width:100%;
+    height:400px;
+   }
+   #newly-in>div{
+    width:95%;
+    height:365px;
+    margin:auto;
+   }
+   #newly-in>div>img{
+    width:100%;
+    height:100%;
+    border-radius: 10px;
+   }
+   #this{
+   width:100%;
+   height:500px;
+   /* border:2px solid red; */
+   }
+   #this>p{
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+   }
+   #this>p>span{
+    color:red;
+    margin:0px 15px;
+   }
+   #this-in{
+    width:95%;
+    height:80%;
+    /* border:2px solid red;    */
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    margin:auto;
+    gap:30px;
+   }
+   #this-in>div{
+    width:100%;
+  
+   }
+  #this-in>div>img{
+    width:100%;
+    height:100%;
+    border-radius: 10px;
+  }
+  #basic{
+   width:100%;
+   height:510px;
+   /* border:2px solid red; */
+  }
+  #basic>p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #basic>p>span{
+    color:red;
+    margin:0px 15px;
+  }
+  #basic-in{
+    width:80%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin:auto;
+    gap:20px;
+   
+   }
+   #basic-in>div{
+    height:420px;
+   width:100%;
+   /* border:2px solid red; */
+   margin:auto;
+   border-radius: 10px;
+   text-align: center;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   background-color: white;
+   }
+   #basic-in>div>img{
+   width:57%;
+   height:55%;
+   border-radius: 10px;
+   }
+   #basic-in>div>div{
+    padding-top: 30px;
+    display:flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+   }
+   #basic-in>div>p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    padding:0px 50px;
+   }
+   #basic-in>div>div>img{
+    width:45px;
+   }
+   #basic-in>div>div>button{
+    width:75%;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    height:45px;
+   }
+   #basic-in>div>h3>span+span{
+    color:deeppink;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0px 15px;  
+   }
+   #basic-in>div>h3{
+   padding-top: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  
+   }
+
+   #basic-in>div:nth-child(2) h3{
+  margin-top: -10px;
+    font-family:Arial, Helvetica, sans-serif;
+    /* border:2px solid red */
+   }
+   #basic-in>div:nth-child(4) h3{
+  margin-top: -10px;
+    font-family:Arial, Helvetica, sans-serif;
+    /* border:2px solid red */
+   }
+   
+   #basic-in>div>h3>span{
+    color:gray;
+    font-size: 12px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0px 15px ;
+   }
+   #station{
+   width:100%;
+   height:530px;
+   /* border:2px solid red; */
+  }
+  #station>p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #station>p>span{
+    color:red;
+    margin:0px 15px;
+  }
+  #station-in{
+    padding-top:20px;
+    width:80%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin:auto;
+    gap:20px;
+   
+   }
+   #station-in>div{
+    height:420px;
+   width:100%;
+   /* border:2px solid red; */
+   margin:auto;
+   border-radius: 10px;
+   text-align: center;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   background-color: white;
+   }
+   #station-in>div>img{
+   width:57%;
+   height:55%;
+   border-radius: 10px;
+   }
+   #station-in>div>div{
+    padding-top: 15px;
+    display:flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+   }
+   #station-in>div>p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    padding:0px 50px;
+   }
+   #station-in>div>div>img{
+    width:45px;
+   }
+   #station-in>div>div>button{
+    width:75%;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    height:45px;
+   }
+   #station-in>div>h3>span+span{
+    color:deeppink;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0px 15px;  
+   }
+   #station-in>div>h3{
+   padding-top: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  
+   }
+
+   #station-in>div:nth-child(2) h3{
+  margin-top: 35px;
+    font-family:Arial, Helvetica, sans-serif; 
+    /* border:2px solid red */
+    }
+   /* #station-in>div:nth-child(4) h3{ */
+  /* margin-top: -10px;
+    font-family:Arial, Helvetica, sans-serif; */
+    /* border:2px solid red */
+   /* } */
+   
+   #station-in>div>h3>span{
+    color:gray;
+    font-size: 12px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0px 15px ;
+   }
+   #explore{
+    width:100%;
+    height:285px;
+    /* border:2px solid red; */
+   }
+   #explore>p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   #explore>p>span{
+    color:red;
+    margin:0px 15px;
+   }
+   #explore-in{
+    width:95%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin:auto;
+    gap:35px;
+   }
+   #explore-in>div{
+    width:100%;
+    height:225px;
+    /* border:2px solid red; */
+    margin:auto;
+    border-radius: 10px;
+   }
+   #explore-in>div>img{
+    width:100%;
+    height:100%;
+    border-radius: 10px;
+   }
+   #hr1{
+    width:95%;
+    color:gray;
+    border:0.1px solid rgb(223, 212, 212);
+   }
+   #more{
+    width:100%;
+    height:380px;
+    margin:auto;
+    /* border: 2px solid red; */
+    background-color: rgb(246, 242, 236);
+   }
+   #more>pre{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* border:2px solid red; */
+    color:rgb(41, 40, 40);
+    padding-left: 2.5%;
+   }
+   #more>pre>span{
+    color:red;
+    margin:0px 20px;
+    font-size: 30px;
+    font-weight:600;
+   }
+   #more>p{
+    font-size: 24px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: rgb(39, 37, 37);
+   }
+   #more>p>span{
+    color:red;
+    margin:0px 15px;
+   }
+   #more>p+p{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+   }
+   .custom-search{
+    position: relative;
+    width:48%;
+    margin: auto;
+   }
+   .custom-search-input{
+    width:100%;
+    border:1px solid grey;
+    border-radius: 8px;
+    padding:13px 0px 13px 20px;
+    line-height: 1;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+   }
+   .custom-search-button{
+    position: absolute;
+    right: 0px;
+    top:1px;
+    bottom: 3px;
+    border:0;
+    background: black;
+    color:#fff;
+    outline:none;
+    padding:0px 25px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    z-index: 2;
+    height:100%;
+    font-size: 16px;
+   }
+  
+   #footer{
+    width:100%;
+    height:670px;
+    background-color: black;
+   }
+   #footer>img{
+    width:100%;
+    height:17%;
+    margin-bottom: 40px;
+   }
+  #social-handle{
+   height:30px;
+   width:24%;
+   /* border:2px solid red; */
+   margin: auto;
+   display: flex;
+   background-color: black;
+   justify-content: space-between;
+  }
+  #social-handle>a>img{
+    border-radius: 50%;
+  }
+  #social-handle img{
+    width:100%;
+    height:35px;
+
+  }
+  #footer>hr{
+    margin-top: 25px;
+    width:95%;
+    border:1px solid grey;
+  }
+  #terms{
+    width:62%;
+    height:45px;
+    /* border:2px solid red; */
+    margin:auto;
+    display:flex;
+    justify-content: space-between;
+  }
+  #terms>p{
+    color:rgb(230, 213, 213);
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #terms>a{
+    color:rgb(230, 213, 213);
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+  }
+  #footer-details{
+    width:95%;
+    height:150px;
+    /* border:2px solid red; */
+    margin:auto;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #footer-details>div:nth-child(1){
+    height:150px;
+    /* border:1px solid red; */
+    width:17%;
+    color:white;
+  }
+  #footer-details>div{
+    height:80px;
+    /* border:1px solid red; */
+    width:17%;
+    color:white;
+   
+  }
+  #footer-details>div:nth-child(2){
+    line-height: 10px;
+  }
+  #footer-details>div:nth-child(3){
+    line-height: 10px;
+  }
+  #footer-details>div:nth-child(4){
+    line-height: 10px;
+  }
+  #footer-details>div:nth-child(5){
+    line-height: 10px;
+  }
+  #footer-details>div>h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+  }
+  #footer-details>div>h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+  }
+  #footer-details>div>h3+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color:rgb(140, 138, 138);
+    font-size: 18px;
+ 
+    padding-right: 80px;
+    margin-bottom: 20px;
+   display: inline;
+  } 
+  #footer-details>div>p+p{
+    font-family: Arial, Helvetica, sans-serif;
+      color: rgb(159, 153, 153);
+     display: inline;
+  }
+  #hr2{
+    border:1px solid grey;
+  }
+  #downlod-bar{
+    width:95%;
+    height:80px;
+    /* border:1px solid red; */
+    margin: auto;
+    color:white;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  #downlod-bar>div{
+    /* border:2px solid red; */
+    height:60px;
+    width:100%;
+    margin: auto;
+    
+  }
+  #downlod-bar>div:nth-child(1){
+   text-align: right;
+  }
+  #downlod-bar>div>h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 10px;
+  }
+  #downlod-bar>div>p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color:grey;
+    line-height: 0px;
+    padding-right: 60px;
+  }
+  #downlod-bar img{
+    height:60%;
+    width:19%;
+    padding:10px 10px 10px 15px;
+  }
+  #hr3{
+    line-height: 0px;
+  }
+  #footer>p{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 14px;
+    color: grey;
+    margin-top: 30px;
+  }
+  #login a{
+    color:white;
+    text-decoration: none;
+  }
+  #register a{
+    color:white;
+    text-decoration: none;
+  }
+  #navbar>div a{
+    text-decoration: none;
+  }
+ </style> 
+</head>
+<body>
+  
+    <div id="navbar">
+        <div>
+            Get a FREE festival box worth Rs 880 on a spend of Rs.999.
+        </div>
+        <div>
+         <img src="beautybase.png">
+         <input id="navbarinput" type="text"  placeholder="  Try Liquid Lipstick" onkeyup="handlesearch()" > <button>Search</button>
+        <img src="login logo_LI.jpg">/
+   
+         <div> <p id="login"><a href="login.html">login</a></p>
+            <p>/</p>
+            <p id="register"><a href="register.html">register</a></p></div>
+            <div id="img">
+                <img src="heart.jpg">
+                <img src="shopping bag logo.jpg">
+                <img src="perchantate logo.png">
+            </div>
+        </div>
+       
+        <div>
+            <a href="https://in.sugarcosmetics.com/makeup"><p>Makeup</p></a>
+            <a href="https://in.sugarcosmetics.com/blend-trend-makeup-brush"><p>Brushes</p></a>
+            <a href="https://in.sugarcosmetics.com/skin-care-products"><p>Skincare</p></a>
+            <a href="https://in.sugarcosmetics.com/collections/gifting"><P>Gifting</P></a>
+            <a herf="https://in.sugarcosmetics.com/blog"><p>Blog</p></a>
+            <a href="https://in.sugarcosmetics.com/pages/offer"><P>Offers</P></a>
+            <a href="https://in.sugarcosmetics.com/stores"><p>Stores</p></a>
+        </div>
+    </div>
+<div id="slider">
+    <figure>
+        <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/b69d2fc2-53f5-45ed-8e89-8dcd108ed2b6.jpg">
+        <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/1fa29c9d-b7b6-4aa9-ac54-a2195c10fc63.jpg">
+        <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/9f8fe6f9-3ebe-4d1b-9b15-d5e5e642868b.jpg">
+        <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/7f60a658-5e24-4abb-af2b-13d4e6716c75.gif">
+        <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/9a2d8926-61ab-4d58-a445-1b83a4cacd79.jpg">
+    </figure>
+</div>
+
+    <div id="cards">
+        <p> <span>────</span>BESTSELLERS<span>────</span></p>
+    
+    <div id="innercards">
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/1_529c20ee-c872-4029-9702-8580d7b9a66f.jpg?v=1640178644">
+            <p>Ace of Face Foundation stick</p>
+            <p> 🔴 16 shades</p>
+            <h2>₹999</h2>
+
+            <div>
+                <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+
+                <button>SELECT SHADE</button>
+            </div>
+
+        </div>
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/01_d6ffec78-c2b6-4466-8672-233fee0285a8.jpg?v=1644394232">
+            <p>Ace of Face Foundation stick</p>
+            <p> 🔴 16 shades</p>
+            <h2>₹849</h2>
+
+            <div>
+                <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+
+                <button>SELECT SHADE</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/424092031-1.jpg?v=1661529396">
+            <p>Ace of Face Foundation stick</p>
+            <p> 🔴 16 shades</p>
+            <h2>₹499</h2>
+
+            <div>
+                <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+
+                <button>SELECT SHADE</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/1_6f55bcac-3e42-4253-88ee-cec0fa43c62a.jpg?v=1645608270">
+            <p>Ace of Face Foundation stick</p>
+            <p> 🔴 17 shades</p>
+            <h2>₹699</h2>
+
+            <div>
+                <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+
+                <button>SELECT SHADE</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="hot-deals">
+        <p> <span>────</span>HOT DEALS<span>────</span></p>
+        <div id="hot-deals-in">
+           
+       <div>
+        <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/d9560110-40f7-4d14-a98d-5599b45a84ef.jpg">
+       </div>
+       <div>
+        <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/d5b0ca8f-cc40-4f07-b7d4-25aadde11fd1.jpg">
+       </div>
+       <div>
+        <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/fb82e32a-164e-432a-af89-b6593001d384.jpg">
+       </div>
+
+        </div>
+     </div>   
+     
+     <div id="just-in">
+       <p> <span>────</span>JUST-IN<span>────</span></p>
+     
+     <div id="just-in-in">
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/SUGAR-Prime-Sublime-Primer---Powered-By-Images1_ebe7ea59-dff5-4a2a-9a70-c94435d3f46e.jpg?v=1666928973">
+            <p>SUGAR Prime Sublime Primer</p>
+            <!-- <p> 🔴 16 shades</p> -->
+            <h2>₹499</h2>
+
+            <div>
+                <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+
+                <button>ADD TO CART</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/439876297-01.jpg?v=1666196034">
+            <p>SUGAR Prime Sublime Primer</p>
+            <!-- <p> 🔴 16 shades</p> -->
+            <h2>₹499</h2>
+
+            <div>
+                <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+
+                <button>ADD TO CART</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/DiwaliPatakaMakeupKit-WBGImagesArtboard1copy14.jpg?v=1665072357">
+            <p>SUGAR Prime Sublime Primer</p>
+            <!-- <p> 🔴 16 shades</p> -->
+            <h2>₹499</h2>
+
+            <div>
+                <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+
+                <button>ADD TO CART</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/Vineeta_s-Favourite-Makeup-kit---WBG-images.jpg?v=1657555460">
+            <p>SUGAR Prime Sublime Primer</p>
+            <!-- <p> 🔴 16 shades</p> -->
+            <h2>₹499</h2>
+
+            <div>
+                <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+
+                <button>ADD TO CART</button>
+            </div>
+        </div>
+     </div>
+     </div>
+
+     <div id="sugar">
+      <p><span>────</span>SUGAR STREAMING<span>────</span></p>
+        <div id="sugar-in">
+           <div>
+            <div>
+               <video playsinline autoplay muted src="https://cdn4.fireworktv.com/medias/2022/11/8/1667907533-zhrmtkcn/watermarked/540/Y2Mate.is-Bollywood1990vs2022MakeupshortsSUGARCosmetics-UavyluCenIQ-720p-1658012746503.mp4"></video>
+            </div>
+            
+           </div>
+           <div>
+            <div>
+                <video playsinline autoplay muted src="https://cdn4.fireworktv.com/medias/2022/11/8/1667909951-lzinxdmb/watermarked/540/video-output-BBC54067-C088-4C53-BEB9-BBDCA4E79C23.mp4"></video>
+            </div>
+           
+           </div>
+           <div>
+            <div>
+                <video playsinline autoplay muted src="https://cdn4.fireworktv.com/medias/2022/11/8/1667908307-mvufsral/watermarked/540/Y2Mate.is-HowToFixMakeupMistakesshortsSUGARCosmetics-sd4gKleoDEg-720p-1658015010190.mp4"></video>
+            </div>
+           
+           </div>
+           <div>
+            <div>
+                <video playsinline autoplay muted src="https://cdn4.fireworktv.com/medias/2022/11/1/1667298001-zniuqvtp/watermarked/540/video-output-D39F512C-CA85-413B-8446-3E6D459A5AAE.mp4"></video>
+            </div>
+            
+           </div>
+           <div>
+            <div>
+                <video playsinline autoplay muted src="https://cdn4.fireworktv.com/medias/2022/11/1/1667297542-vqnmedkg/watermarked/540/video-output-43209D35-4BC0-42E7-849D-93B3F1891EC4.mp4"></video>
+            </div>
+           
+           </div>
+        </div>
+     </div>
+
+     <div id="sukar-he">
+        <p><span>───</span>SHUKAR HAI, SUGAR HAI<span>───</span></p>
+        <div>
+            <iframe  width="560" height="315" src="https://www.youtube.com/embed/vrhYCqgLnDs?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+     </div>
+ 
+     <div id="top">
+        <p><span>───</span>TOP PICKS OF THE WEEK<span>───</span></p>
+        <div id="top-in">
+            <div>
+                <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/fd062254-fcc7-432d-94dc-9d7da4a6fc62.gif">
+            </div>
+            <div>
+                <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/9f9d2095-f019-4bb5-b961-db87fab439f6.jpg">
+            </div>
+            <div>
+                <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/c325cb7a-0c27-454d-a631-1e184b071e55.jpg">
+            </div>
+        </div>
+     </div>
+
+     <div id="gifting">
+        <p><span>───</span>GIFTING<span>───</span></p>
+        <div id="gifting-in">
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/04_b475d6dd-c07b-43b0-9f78-c989b2fe4f6d.jpg?v=1659446263">
+                <p>Wedding Makeup Kit</p>
+                <h3><span>₹2343</span>₹1699<span>(27% off)</span></h3>
+
+                <div>
+                    <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+
+                <button>CHOOSE PRODUCT</button>
+                </div>
+            </div>
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/WBG1_09f0cf83-792a-4185-8882-5e5e6909a459.jpg?v=1657814596">
+                <p>Smudge Me Not Mini Liquid Lipstick Set-Power up Your Pout</p>
+                <h3><span>₹2343</span>₹1699<span>(27% off)</span></h3>
+
+                <div>
+                    <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+
+                <button>CHOOSE PRODUCT</button>
+                </div>
+            </div>
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/1_37e8dc88-a720-44ed-a5f3-1e0f0e95bc17.jpg?v=1659517990">
+                <p>Date Night Makeup Kit</p>
+                <h3><span>₹2343</span>₹1699<span>(27% off)</span></h3>
+
+                <div>
+                    <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+
+                <button>CHOOSE PRODUCT</button>
+                </div>
+            </div>
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/1_0cbf7ca7-3b1c-4838-8fda-176ebd7d38fa.jpg?v=1649423983">
+                <p>Festival Ready Kit</p>
+                <h3><span>₹2343</span>₹1699<span>(27% off)</span></h3>
+
+                <div>
+                    <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+
+                <button>CHOOSE PRODUCT</button>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <div id="reffer">
+        <p><span>───</span>REFER YOUR FRIENDS<span>───</span></p>
+        <div id="reffer-in">
+            <div>
+                <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/8bfe8bb4-002d-4097-a773-6af33325a594.jpg">
+            </div>
+        </div>
+     </div>
+
+     <div id="super">
+        <p><span>───</span>SUPER-SAVERS<span>───</span></p>
+        <div id="super-in">
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-smudge-me-not-liquid-lipstick-matte-as-hell-crayon-lipstick-value-set-14600053391443.jpg?v=1619119204">
+                <p>Modern Matte Lipstick Value Set</p>
+                <h3><span>₹1398</span>₹1149<span>(17% off)</span></h3>
+
+                <div>
+                    <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+
+                <button>CHOOSE PRODUCT</button>
+                </div>
+            </div>
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/Value-Set-11---WBG-Images_1.jpg?v=1659456262">
+                <p>Bold Honesty Face Makeup Value Set</p>
+                <h3><span>₹797</span>₹699<span>(12% off)</span></h3>
+
+                <div>
+                    <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+
+                <button>CHOOSE PRODUCT</button>
+                </div>
+            </div>
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/2_bb525208-246a-4f40-b57f-d88372708398.jpg?v=1655308814">
+                <p>Glam Eye Makeup Value Set</p>
+                <h3><span>₹1546</span>₹1249<span>(19% off)</span></h3>
+
+                <div>
+                    <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+
+                <button>CHOOSE PRODUCT</button>
+                </div>
+            </div>
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/08.jpg?v=1630511040">
+                <p>Face Palette + Lip Balm</p>
+                <h3><span>₹998</span>₹799<span>(19% off)</span></h3>
+
+                <div>
+                    <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+
+                <button>CHOOSE PRODUCT</button>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <div id="newly">
+        <p><span>───</span>NEWLY LAUNCHED<span>───</span></p>
+        <div id="newly-in">
+          <div>
+            <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/89e51326-1363-44e1-94f1-d5bd00bd2ca9.gif">
+          </div>
+        </div>
+     </div>
+
+     <div id="this">
+        <p><span>───</span>THIS OR THAT<span>───</span></p>
+        <div id="this-in">
+            <div>
+                <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/d1b038a4-418a-4309-92b1-9aff3b4393ea.jpg">
+            </div>
+            <div>
+                <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/984514b9-81c3-4e2a-922e-7b18f42ef77f.jpg">
+            </div>
+        </div>
+     </div>
+
+     <div id="basic">
+        <p><span>───</span>SKINCARE BASICS
+            <span>───</span></p>
+            <div id="basic-in">
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/CCLipScrubWBG-3.jpg?v=1628610315">
+                    <p>Cofee Culture Lip Scrub</p>
+                    <h3>₹299</h3>
+    
+                    <div>
+                        <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+    
+                    <button>ADD TO CART</button>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/Coffee-culture-cleansing-balm-stick-01.jpg?v=1643375708">
+                    <p>Cofee Culture Cleansing Balm Stick</p>
+                    <h3>₹699</h3>
+    
+                    <div>
+                        <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+    
+                    <button>ADD TO CART</button>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/Hyaluronic-Serum-3_1.jpg?v=1626423730">
+                    <p>Aquaholic Hyaluronic Serum</p>
+                    <h3>₹499</h3>
+    
+                    <div>
+                        <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+    
+                    <button>ADD TO CART</button>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/1_61109b87-1ae6-4cb4-8550-5b57d688a4eb.jpg?v=1651852771">
+                    <p>Bling Leader llluminating Sunscreen SPF35 PA+++</p>
+                   
+                    <h3><span>₹998</span>₹799<span>(19% off)</span></h3>
+    
+                    <div>
+                        <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+    
+                    <button>SELECT SHADE</button>
+                    </div>
+                </div>
+            </div>
+     </div>
+
+     <div id="station">
+        <p><span>───</span>MERCH STATION
+            <span>───</span></p>
+            <div id="station-in">
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-obsessive-compulsive-case-organizer-28508036235347.jpg?v=1624981425">
+                    <p>Obsessive Compulsive Case Organizer</p>
+                    <h3>₹599</h3>
+    
+                    <div>
+                        <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+    
+                    <button>ADD TO CARD</button>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-glampacker-duffle-bag-28150649978963.jpg?v=1619156211">
+                    <p>Glampacker Duffle Bag</p>
+                    <h3>₹999</h3>
+    
+                    <div>
+                        <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+    
+                    <button>ADD TO CARD</button>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-money-maker-envelope-wallet-black-28490557358163.jpg?v=1624954703">
+                    <p>Money Maker Envelope Wallet-Black</p>
+                    <h3>₹599</h3>
+    
+                    <div>
+                        <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+    
+                    <button>ADD TO CARD</button>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-money-maker-envelope-wallet-grey-28490559979603.jpg?v=1624953191">
+                    <p>Money Maker Envelope Wallet-Grey</p>
+                   
+                    <h3>₹599</h3>
+    
+                    <div>
+                        <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v993-11-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b1c2885b0a3beb94e9809994d2165ad1">
+    
+                    <button>ADD TO CARD</button>
+                    </div>
+                </div>
+            </div>
+     </div>
+
+     <div id="explore">
+        <p><span>───</span>EXPLORE<span>───</span></p>
+        <div id="explore-in">
+            <div>
+                <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/97722164-55b4-4030-a9f6-0219a9575a24.jpg">
+            </div>
+            <div>
+                <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/52b4f85e-f9e8-465a-a9a4-6f11e6b407aa.jpg">
+            </div>
+            <div>
+                <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/a7b72adf-7e02-45c4-a208-552d46eefc4c.jpg">
+            </div>
+            <div>
+                <img src="https://d32baadbbpueqt.cloudfront.net/Homepage/88ee8d58-7cc5-450a-953b-aa16ef190d52.jpg">
+            </div>
+        </div>
+     </div>
+<hr id="hr1">
+
+     <div id="more">
+     <pre>READ MORE ABOUT SUGAR COSMETICS <span>></span>
+    </pre>
+    <p><span>───</span>LET’S STAY IN TOUCH<span>───</span></p>
+    <p>Get the latest beauty tips straight to your inbox. Can’t wait to connect!</p>
+    <div class="custom-search">
+        <input type="text" class="custom-search-input" placeholder="Enter Email">
+        <button class="custom-search-button" type="submit">SUBSCRIBE</button>
+    </div>
+</div>
+<div id="footer">
+    <img src="https://in.sugarcosmetics.com/Footer_sugar_icon.svg">
+    <div id="social-handle">
+   <a href="https://www.facebook.com/trySUGAR/"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvpRkylFo8mVHZ8PZI1SBmEM4rpOz7uZYZJg&usqp=CAU"></a>
+    <a href="https://www.tumblr.com/sugarcosmetics-blog "><img src="https://www.wackyprint.com/previews_store/1/110/letter-t-lowercase-white-black.jpg"></a>
+   <a href="https://www.youtube.com/channel/UCKVqnev2idvmUNKc2b91B8g"><img src="https://i.pinimg.com/736x/e8/c9/82/e8c9828387de2a83e5469a95bc6d8574.jpg"></a>
+
+    <a href="https://twitter.com/trySUGAR"><img src="titer logo.png"></a>
+   <a href="https://www.instagram.com/trysugar/?hl=en"> <img src="insta logo.png"></a>
+   <a href="https://us.sugarcosmetics.com/pages/contact-us"><img src="email logo.png"></a>
+    <a href="https://www.pinterest.com/sugarcosmetics/"><img src="pintrest logo.png"></a>
+    </div>
+    <hr>
+    <div id="terms">
+      <a href="https://in.sugarcosmetics.com/stores"><p>Stores</p></a>
+      <a href="https://in.sugarcosmetics.com/pages/terms-conditions"><p>Terms & Conditions</p></a>
+      <a href="https://in.sugarcosmetics.com/pages/returns-refunds"><p>Returns</p></a>
+      <a href="https://in.sugarcosmetics.com/pages/faqs"><p>FAQs</p></a>
+      <a href="https://in.sugarcosmetics.com/pages/about-us"><p>About Us</p></a>
+    </div>
+    <hr>
+    <div id="footer-details">
+      <div>
+        <h2>GET IN TOUCH</h2>
+        <h3>Call us at</h3>
+        <p>1800-209-9933</p>
+        <p>Monday to Friday: 9 AM to 7 PM </p>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <p>hello@sugarcosmetics.com</p>
+      </div>
+      <div>
+        <h3>Careers</h3>
+        <p>We're hiring!</p>
+      </div>
+      <div>
+        <h3>Press & Media</h3>
+        <p>pr@sugarcosmetics.com</p>
+      </div>
+      <div>
+        <h3>Influencer Collab</h3>
+        <p>Join Us</p>
+      </div>
+    </div>
+ <hr>
+ <div id="downlod-bar">
+    <div>
+        <h3>GET THE NEW SUGAR APP TODAY!</h3>
+        <p>Tap into a better shopping experience.</p>
+    </div>
+    <div>
+       <a href="https://sugarcosmetics.app.link/WebFApp"><img src="https://in.sugarcosmetics.com/playstore.png"></a>
+       <a href="https://play.google.com/store/apps/details?id=com.app.sugarcosmetics&pli=1"> <img src="https://in.sugarcosmetics.com/apple-store.png"></a>
+    </div>
+ </div>
+ <hr id="hr3">
+ <p>Copyright © 2022 SUGAR Cosmetics. All rights reserved.</p>
+</div>
+
+
+</body>
+</html>
+
+<script>
+ const handlesearch = () => {
+   let filter= document.getElementById("navbarinput").value.toUpperCase;
+    
+  let cards=document.getElementById("cards")
+
+   for(var i=0;i<cards.length;i++){
+     let p=cards.getElementsByTagName("p")[i];
+
+if(p){
+    let textvalue= p.textContent || p.innerHTML;
+
+    if(textvalue.toUpperCase().indexOf(filter) > -1){
+       cards[1].style.display = "";
+    }else{
+        cards[i].style.display = "none";
+    }
+}
+   }
+   
+}
+</script>
+
